@@ -1,0 +1,50 @@
+﻿@model Lab1Task.ViewModel.SampleViewModel
+@{
+    ViewBag.Title = "Start";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Start</h2>
+
+<div>
+    <h2>All Player</h2>
+    <ul>
+       @foreach (var p in Model.Player)
+        {
+           <li>
+               <ul>
+                  <text>@p.Id</text> <br/>
+                  <text>@p.Name</text> <br/>
+                  <text>@p.Salary</text> <br/>
+               </ul>
+           </li>
+
+        }
+    </ul>
+</div>
+
+
+<div>
+    <h2>All Staff</h2>
+    <ul>
+        @foreach (var s in Model.Staff)
+         {
+             <li>
+                 <ul>
+                     <text>@s.Id</text>
+                     <br />
+                     <text>@s.Name</text>
+                     <br />
+                     <text>@s.Position</text>
+                     <br />
+                 </ul>
+             </li>
+
+         }
+    </ul>
+</div>
+
+<h2>Stadium</h2>
+<text>Loacation: @Model.Stadium.Location</text> <br/>
+<text>Capacity: @Model.Stadium.Capacity</text> <br/>
+
